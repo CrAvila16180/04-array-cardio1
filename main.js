@@ -166,13 +166,29 @@ const inventors = [
     log('')
 
     const alpha = people.sort((a,b) => {
-       const [aFirst,aLast] = a.split(',');
-       const [bFirst,bLast] = b.split(',');
-       return aFirst > bFirst ? 1 : -1;
+       const [aLast,aFirst] = a.split(',');
+       const [bLast,bFirst] = b.split(',');
+       return aLast > bLast ? 1 : -1;
     })
 
     log(alpha);
 
     // 8. Reduce exercise
     // Sum up the instances of each data
+
+    log('')
+    log('8. Sum up the instances of each data')
+    log('')
+
+    const transportation = data.reduce((obj, item) => {
+      if(!obj[item]){
+         obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {})
+
+    log(transportation);
+
+    
 
