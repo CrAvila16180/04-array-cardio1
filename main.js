@@ -161,6 +161,18 @@ const inventors = [
     //7. Sort exercise
     //Sort the people alphabetically by last name
 
+    log('')
+    log('7. Sort the people alphabetically by last name')
+    log('')
+
+    const alpha = people.sort((a,b) => {
+       const [aFirst,aLast] = a.split(',');
+       const [bFirst,bLast] = b.split(',');
+       return aFirst > bFirst ? 1 : -1;
+    })
+
+    log(alpha);
+
     // 8. Reduce exercise
     // Sum up the instances of each data
 
