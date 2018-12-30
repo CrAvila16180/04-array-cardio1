@@ -107,12 +107,31 @@ const inventors = [
     // Sorts the elements of an array in place and returns the new array
     // 3. Sort the inventors by birthdate, oldest to youngest
 
+    log('')
+    log('3. Array.prototype.sort()')
+    log('')
+
     const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
 
     console.table(ordered)
 
     // Array.prototype.reduce()
+    // Executes a reducer function on each member of the array resulting in a single value 
     // 4.How manyyears did all the inventors live?
+
+    log('')
+    log('4. Array.prototype.reduce()')
+    log('')
+
+    const totalYears = inventors.reduce((total, inventor) => {
+       return total + (inventor.passed - inventor.year);
+    }, 0);
+
+    console.log(totalYears);
+
+
+
+
 
     // 5. Sort the inventors by years lived
 
