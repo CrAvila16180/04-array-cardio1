@@ -78,18 +78,30 @@ const inventors = [
      ];
 
 
+        const log = (content) => console.log(content);
  //Instructions
 
     //  Array.prototype.filter()
+    // Creates a new array with all elements that pass the test implemented by the provided function.
     //  1. Filter the list of inventors for those who were born in the 1500's
+     log('1. Array.prototype.filter()')
+     log('');
 
     const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
-
     console.table(fifteen);
 
-
     // Array.prototype.map()
+    // Creates a new Array with the results of calling a provided function on every element in the calling array
     // 2. Give an array of the inventors' first andlast names
+
+    log('')
+    log('2. Array.prototype.map()')
+    log('')
+
+    const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    console.table(fullNames);
+
+
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
